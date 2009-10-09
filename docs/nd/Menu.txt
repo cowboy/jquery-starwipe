@@ -46,7 +46,7 @@ Format: 1.4
 # --------------------------------------------------------------------------
 
 
-File: jQuery Star Wipe  (jquery.ba-starwipe.js)
+File: jQuery Star Wipe: Why eat hamburger when you can have steak?  (jquery.ba-starwipe.js)
 
 Group: Index  {
 

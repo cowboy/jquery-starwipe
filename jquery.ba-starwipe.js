@@ -7,7 +7,7 @@
  * http://benalman.com/about/license/
  */
 
-// Script: jQuery Star Wipe
+// Script: jQuery Star Wipe: Why eat hamburger when you can have steak?
 //
 // *Version: 1.0, Last updated: 10/9/2009*
 // 
@@ -35,7 +35,7 @@
 // tested with, and what browsers it has been tested in.
 // 
 // jQuery Versions - 1.3.2
-// Browsers Tested - Safari 4, Chrome 3
+// Browsers Tested - Chrome 3, Safari 4
 // 
 // About: Release History
 // 

@@ -1,4 +1,4 @@
-# jQuery Star Wipe #
+# jQuery Star Wipe: Why eat hamburger when you can have steak? #
 [http://benalman.com/projects/jquery-starwipe-plugin/](http://benalman.com/projects/jquery-starwipe-plugin/)
 
 Version: 1.0, Last updated: 10/9/2009
