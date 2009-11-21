@@ -67,6 +67,7 @@ ob_end_clean();
 
 ob_start();
 ?>
+<?= $shell['donate'] ?>
 
 <p>
   With <a href="http://benalman.com/projects/jquery-starwipe-plugin/">jQuery Star Wipe</a> you can enable the single best transition ever created, the star wipe, in any recent WebKit browser! Want support for star wipe in more browsers? Ask your favorite browser manufacturer to support <a href="http://webkit.org/blog/181/css-masks/">CSS masks</a>!

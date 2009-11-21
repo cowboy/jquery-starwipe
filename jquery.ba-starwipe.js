@@ -1,9 +1,9 @@
 /*!
  * jQuery Star Wipe - v1.0 - 10/9/2009
- * http://benalman.com/
+ * http://benalman.com/projects/jquery-starwipe-plugin/
  * 
  * Copyright (c) 2009 "Cowboy" Ben Alman
- * Licensed under the MIT license
+ * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
  */
 
@@ -19,7 +19,7 @@
 // About: License
 // 
 // Copyright (c) 2009 "Cowboy" Ben Alman,
-// Licensed under the MIT license.
+// Dual licensed under the MIT and GPL licenses.
 // http://benalman.com/about/license/
 // 
 // About: Examples
