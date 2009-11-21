@@ -81,8 +81,10 @@ ob_start();
 
 <ul>
   <li><a href="http://jquery.com/">jQuery</a></li>
-  <li><a href="http://www.mozilla.com/">Mozilla</a></li>
-  <li><a href="http://digg.com/">Digg</a></li>
+  <li><a href="http://webkit.org/">Webkit</a></li>
+  <li><a href="http://www.apple.com/safari/">Safari</a></li>
+  <li><a href="http://www.google.com/chrome">Google chrome</a></li>
+  <li><a href="http://www.css3.info/">CSS3.info</a></li>
   <li><a href="http://benalman.com/">Benalman.com</a></li>
 </ul>
 
