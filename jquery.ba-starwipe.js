@@ -1,24 +1,24 @@
 /*!
- * jQuery Star Wipe - v1.0 - 10/9/2009
+ * jQuery Star Wipe - v1.1 - 1/10/2010
  * http://benalman.com/projects/jquery-starwipe-plugin/
  * 
- * Copyright (c) 2009 "Cowboy" Ben Alman
+ * Copyright (c) 2010 "Cowboy" Ben Alman
  * Dual licensed under the MIT and GPL licenses.
  * http://benalman.com/about/license/
  */
 
 // Script: jQuery Star Wipe: Why eat hamburger when you can have steak?
 //
-// *Version: 1.0, Last updated: 10/9/2009*
+// *Version: 1.1, Last updated: 1/10/2010*
 // 
 // Project Home - http://benalman.com/projects/jquery-starwipe-plugin/
 // GitHub       - http://github.com/cowboy/jquery-starwipe/
 // Source       - http://github.com/cowboy/jquery-starwipe/raw/master/jquery.ba-starwipe.js
-// (Minified)   - http://github.com/cowboy/jquery-starwipe/raw/master/jquery.ba-starwipe.min.js (8.9kb)
+// (Minified)   - http://github.com/cowboy/jquery-starwipe/raw/master/jquery.ba-starwipe.min.js (9.1kb)
 // 
 // About: License
 // 
-// Copyright (c) 2009 "Cowboy" Ben Alman,
+// Copyright (c) 2010 "Cowboy" Ben Alman,
 // Dual licensed under the MIT and GPL licenses.
 // http://benalman.com/about/license/
 // 
@@ -39,12 +39,16 @@
 // 
 // About: Release History
 // 
+// 1.1   - (1/10/2010) Transition can now be canceled by pressing the back
+//         button at any point after starting it.
 // 1.0   - (10/9/2009) Initial release
 
 (function($,window){
   '$:nomunge'; // Used by YUI compressor.
   
-  var win = $(window),
+  var loc = window.location,
+    hash = '#starwipe-loading',
+    
     mask,
     prop = '-webkit-mask-size',
     
@@ -90,24 +94,49 @@
     // Remove any existing IFRAME.
     $('.' + str_starwipe).stop().remove();
     
-    // This determines the maximum mask size to animate the mask to.
-    var max = Math.max( win.width(), win.height() ) * 3.5,
+    var win = $(window),
+      body = $('body'),
+      
+      interval_id,
+      overflow,
+      
+      // This determines the maximum mask size to animate the mask to.
+      max = Math.max( win.width(), win.height() ) * 3.5,
       
       // Create the IFRAME!
       iframe = $('<iframe/>');
+    
+    // Setting the location.hash allows a back button press to cancel the
+    // transition. If pressed, the location.hash will no longer be what we set
+    // it to, so we know to cancel the transition and remove the iframe.
+    loc.hash = hash;
+    
+    // If the user has aborted, cancel the transition and clean things up.
+    function aborted(){
+      if ( loc.hash !== hash ) {
+        clearInterval( interval_id );
+        iframe.stop().remove();
+        overflow && body.css( 'overflow', overflow );
+      }
+    };
+    
+    // Actually test if the user pressed the back button.
+    interval_id = setInterval( aborted, 100 );
     
     iframe
       
       // When IFRAME content loads, let's transition!
       .load(function(){
-        $('body').css({ overflow: 'hidden' });
+        // Save the body "overflow" property in case the user aborts.
+        overflow = body.css( 'overflow' );
+        body.css( 'overflow', 'hidden' );
         
         iframe
           .show()
           .animate({
             '-webkit-mask-size': max + 'px'
           }, 2000, function(){
-            window.location = url;
+            loc.replace( url );
           });
       })
       

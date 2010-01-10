@@ -1,7 +1,7 @@
 # jQuery Star Wipe: Why eat hamburger when you can have steak? #
 [http://benalman.com/projects/jquery-starwipe-plugin/](http://benalman.com/projects/jquery-starwipe-plugin/)
 
-Version: 1.0, Last updated: 10/9/2009
+Version: 1.1, Last updated: 1/10/2010
 
 With jQuery Star Wipe you can enable the single best transition ever created, the star wipe, in any recent WebKit browser!
 
@@ -32,10 +32,11 @@ Chrome 3, Safari 4.
 
 ## Release History ##
 
+1.1 - (1/10/2010) Transition can now be canceled by pressing the back button at any point after starting it.  
 1.0 - (10/9/2009) Initial release
 
 
 ## License ##
-Copyright (c) 2009 "Cowboy" Ben Alman  
+Copyright (c) 2010 "Cowboy" Ben Alman  
 Dual licensed under the MIT and GPL licenses.  
 [http://benalman.com/about/license/](http://benalman.com/about/license/)
