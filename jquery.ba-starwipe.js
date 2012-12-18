@@ -1,5 +1,5 @@
 /*!
- * jQuery Star Wipe - v1.1 - 1/10/2010
+ * jQuery Star Wipe - v1.1.1 - 2012/12/18
  * http://benalman.com/projects/jquery-starwipe-plugin/
  *
  * Copyright (c) 2010 "Cowboy" Ben Alman
@@ -9,7 +9,7 @@
 
 // Script: jQuery Star Wipe: Why eat hamburger when you can have steak?
 //
-// *Version: 1.1, Last updated: 1/10/2010*
+// *Version: 1.1.1, Last updated: 2012/12/18*
 //
 // Project Home - http://benalman.com/projects/jquery-starwipe-plugin/
 // GitHub       - http://github.com/cowboy/jquery-starwipe/
@@ -35,10 +35,11 @@
 // tested with, and what browsers it has been tested in.
 //
 // jQuery Versions - 1.3.2
-// Browsers Tested - Chrome 3, Safari 4
+// Browsers Tested - Chrome 23, Safari 6
 //
 // About: Release History
-//
+// 1.1.1 - (12/18/2012) Detect shorthand version of '-webkit-mask-size' to
+//         support newer versions of WebKit
 // 1.1   - (1/10/2010) Transition can now be canceled by pressing the back
 //         button at any point after starting it.
 // 1.0   - (10/9/2009) Initial release
