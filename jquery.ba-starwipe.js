@@ -80,10 +80,13 @@
   //    not.
   
   $[ str_starwipe ] = function( url ) {
+    var computedProp;
 
     // Let's find out if the browser supports star wipe!
     if ( supports_starwipe === undefined ) {
-      supports_starwipe = $('<div/>').css( prop, '1px' ).css( prop ) === '1px 1px';
+      computedProp = $('<div/>').css( prop, '1px' ).css( prop );
+      supports_starwipe = (computedProp === '1px 1px') ||
+        (computedProp === '1px');
     }
     
     if ( !supports_starwipe ) {
