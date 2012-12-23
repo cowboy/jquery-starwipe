@@ -32,7 +32,7 @@ Chrome 23, Safari 6.
 
 ## Release History ##
 
-1.1.1 - (12/18/2012) Fix CSS mask support checking
+1.1.1 - (12/18/2012) Fix CSS mask support checking  
 1.1 - (1/10/2010) Transition can now be canceled by pressing the back button at any point after starting it.  
 1.0 - (10/9/2009) Initial release
 
