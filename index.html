@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="../shared/jquery-1.3.2.js"></script>
+    <script src="../jquery.ba-starwipe.js"></script>
+    <style>
+      body {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Star Wipe</h1>
+    <ul>
+      <li><a class="demo-link" href="http://www.wikipedia.org">Wikipedia</a></li>
+      <li><a class="demo-link" href="http://developer.yahoo.com/">Yahoo Developer</a></li>
+    </ul>
+
+    <script>
+      $('.demo-link').click(function(event) {
+        $.starwipe($(event.target).attr('href'));
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
