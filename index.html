@@ -5,18 +5,33 @@
     <script src="shared/jquery-1.3.2.js"></script>
     <script src="jquery.ba-starwipe.js"></script>
     <style>
-      body {
-        background-color: gray;
-        color: white;
+      html {
+        font-family: "Helvetica Neue", Helvetica;
       }
     </style>
   </head>
   <body>
-    <h1>Star Wipe</h1>
+    <h1>jQuery Star Wipe</h1>
+    <p>
+      Clicking the links in the list below will load them in an
+      <code>&lt;iframe&gt;</code> and then use a star wipe transition to show
+      them in your browser.
+    </p>
     <ul>
+      <li><a class="demo-link" href="http://www.nytimes.com/">New York Times</a></li>
       <li><a class="demo-link" href="http://www.wikipedia.org">Wikipedia</a></li>
-      <li><a class="demo-link" href="http://developer.yahoo.com/">Yahoo Developer</a></li>
     </ul>
+
+    <hr>
+
+    <footer>
+      <dl>
+        <dt>Maintainer</dt>
+        <dd><a href="https://twitter.com/ssorallen">@ssorallen</a></dd>
+        <dt>Code</dt>
+        <dd><a href="https://github.com/ssorallen/jquery-starwipe">ssorallen/jquery-starwipe</a></dd>
+      </dl>
+    </footer>
 
     <script>
       $('.demo-link').click(function(event) {
